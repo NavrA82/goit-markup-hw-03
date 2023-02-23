@@ -1,0 +1,376 @@
+/* --------------------------General settings------------------------- */
+:root {
+  /* -----text color---- */
+  --first-text-color: #434455;
+  --second-text-color: #FFFFFF;
+  --third-text-color: #2E2F42;
+  --fourth-text-color: #4D5AE5;
+  --fifth-text-color: #F4F4FD;
+  --sixth-text-color: #E7E9FC;
+  /* -----background color----------*/
+  --first-background-color: #2E2F42;
+  --second-background-color:#F4F4FD;
+  --third-background-color: #4D5AE5;
+  --fourth-background-color: #FFFFFF;
+  --accent-color: #404BBF;
+  /* ---------Border color--------- */
+  --border-color-img-portfolio: #E7E9FC;
+  /* --------- found -------------- */
+  --secondary-found: 'Raleway', sans-serif;
+}
+
+/* ---------------------------Universal classes----------------------- */
+body {
+  /* https://fonts.google.com font-family:'Roboto' */
+  font-family: "Roboto", sans-serif;
+  color:#2E2F42;
+}
+/* centering and limiting content by width */
+.container{
+  width: 1158px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* padding between content and border */
+.section {
+  padding: 0 15px 0 15px;
+}
+/* delete marker */
+.list {
+  list-style: none;
+}
+/* delete underline */
+.link {
+  text-decoration: none;
+}
+/* hover and focus effect link*/
+.link:hover,
+.link:focus {
+  color: var(--accent-color);
+}
+/* main title attributes */
+.title {
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+/* subtitle attributes */
+.subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+/* main description attributes */
+.text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--first-text-color);
+}
+/* margin OFF */
+.marginoff,
+h2,
+ul,
+p {
+  margin: 0;
+}
+
+/* fading title effect */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.btn {
+  cursor: pointer;
+  font-family: inherit;
+  display: flex;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  align-items: center;
+  letter-spacing: 0.04em;
+  border-radius: 4px;
+}
+
+/* hover and focus effect button*/
+.btn:hover,
+.btn:focus {
+  background: var(--accent-color);
+  color: var(--second-text-color);
+  border-radius: 4px;
+}
+/* foto full */
+.team-img,
+.portfolio-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/******************************* Main Page ****************************/
+/* -------------------------------Header----------------------------- */
+.header {
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--sixth-text-color);
+} 
+.header-all{
+  display: flex;
+}
+/* ----------logo--------- */
+.header-logo {
+  display: flex;
+  margin-right: 76px;
+  width: 115px;
+
+}
+.header-logo,
+.header-logo span {
+  text-decoration: none;
+  font-family: var(--secondary-found);
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: inherit;
+}
+.header-logo span {
+  color: var(--fourth-text-color);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+/* Menu navigation*/
+.header-menu {
+  display: flex;
+  padding-top: 24px;
+}
+.header-list {
+  display: flex;
+  width: 265px;
+  margin-right: 328px;
+  padding: 0;
+}
+.header-menu-item:not(:last-child){
+  margin-right: 40px;
+}
+.header-menu-link {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--third-text-color);
+}
+/* Contacts */
+.header-address {
+  display: flex;
+}
+.header-address-list {
+  display: flex;
+  padding: 24px 0px;
+}
+.header-address-item{
+  display: flex;
+  gap: 40px;
+}
+.header-address-item:not(:last-child){
+  margin-right: 40px;
+}
+.header-address-link {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--third-text-color);
+}
+
+/* ----------------------------Hero section------------------------- */
+.hero {
+  display: flex;
+  background: var(--first-background-color);
+}
+.hero-title {
+  padding: 188px 316px 0 316px;
+  font-size: 56px;
+  line-height: 1.07;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--second-text-color);
+}
+.hero-button {
+  padding: 16px 32px;
+  margin: 48px auto 188px auto;
+  background: var(--third-background-color);
+  color: var(--second-text-color);
+  border-radius: 4px; 
+  border: 1px solid var(--third-background-color);
+}
+/* ----------------------Basic principles section ---------------------*/
+.principles-list {
+  display: flex;
+  padding-left: 0;
+  padding: 120px 0;
+}
+.principles-item {
+  margin-left: 24px;
+  width: 264px;
+}
+.principles-item:first-child {
+  margin-left: 0px;
+}
+.principles-title {
+  margin-bottom: 8px;
+}
+/* ----------------------- What are we doing section ------------------ */
+.work-title {
+  margin-bottom: 72px;
+}
+.work-list {
+  padding-left: 0;
+  display: flex;
+  padding-bottom: 120px;
+}
+.work-item {
+  display: flex;
+  margin-left: 24px;
+}
+.work-item:first-child {
+  margin-left: 0;
+}
+
+/* ------------------------------ Our Team section ------------------- */
+.team {
+  background: var(--second-background-color);
+}
+.team-title {
+  padding-top: 120px;
+  margin-bottom: 72px;
+}
+.team-list{
+  display: flex;
+  margin-left: 0;
+  padding-left: 0;
+  padding-bottom: 120px;
+}
+.team-item {
+  background: var(--fourth-background-color);
+  margin-left: 24px;
+}
+.team-item:first-child {
+  margin-left: 0;
+}
+.team-subtitle {
+  text-align: center;
+  padding-top: 32px;
+}
+.team-description {
+  text-align: center;
+  margin-top: 8px;
+  padding-bottom: 32px;
+}
+.team-border-img {
+  background: var(--second-text-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* *****************************Portfolio Page ***************************/
+
+/* ------------------- Portfolio filter buttons------------------------- */
+.portfolio-button {
+  display: flex;
+  background: var(--second-background-color);
+  border: 1px solid var(--sixth-text-color);
+  border-radius: 4px;
+  color: var(--fourth-text-color);
+  flex-direction: row;
+  padding: 12px  24px;
+}
+.portfolio-button-list {
+  padding-top: 96px;
+  margin-bottom: 72px;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+}
+.portfolio-button-item{
+  margin-left: 24px;
+}
+.portfolio-button-item:first-child{
+  margin-left: 0;
+}
+/* ---------------------- Row examples of projects ---------------------- */
+.portfolio-img-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding-left: 0;
+  padding-bottom: 120px;
+}
+.portfolio-img-item {
+  margin-left: 24px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.portfolio-img-item:nth-child(3n + 1) {
+  margin-left: 0;
+}
+.portfolio-img-item:nth-child(-n+3) {
+  margin-top: 0;
+}
+.portfolio-img-item:nth-last-child(-n+3) {
+  margin-bottom: 0;
+}
+.portfolio-subtitle {
+  padding-top: 32px;
+  margin-left: 16px;
+}
+.portfolio-description {
+  margin-top: 8px;
+  margin-bottom: 32px;
+  margin-left: 16px;
+}
+.portfolio-border-img{
+  background: var(--second-text-color);
+  border-bottom: 1px solid var(--border-color-img-portfolio);
+  border-right: 1px solid var(--border-color-img-portfolio);
+  border-left: 1px solid var(--border-color-img-portfolio);
+}
+/* ----------------------------- footer ------------------------------*/
+.footer {
+  background: var(--first-background-color);
+}
+.footer-logo{
+  padding-top: 100px;
+  margin-bottom: 16px;
+}
+.footer-logo,
+.footer-logo span {
+  text-decoration: none;
+  font-family: var(--secondary-found);
+  font-size: 18px;
+  line-height: 1.67;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--fifth-text-color);
+  margin: 0;
+}
+.footer-logo span {
+  color: var(--fourth-text-color);
+}
+.footer-description {
+  padding-top: 16px;
+  padding-bottom: 100px;
+  padding-right: 864px;
+  color: var(--sixth-text-color);
+}
