@@ -129,12 +129,12 @@ ul {
 
 /* -------------------------------HEADER----------------------------- */
 .header-section {
-
+  background: var(--fourth-background-color);
+  border-bottom: 1px solid var(--sixth-text-color);
 } 
 .header-all-nav{
   display: flex;
-  background: var(--fourth-background-color);
-  border-bottom: 1px solid var(--sixth-text-color);
+
 }
 /* ---logo------*/
 .header-logo {
@@ -197,8 +197,10 @@ ul {
 }
 
 /* ----------------------------HERO SECTION------------------------- */
-.hero-container {
+.hero-section {
   background: var(--first-background-color);
+}
+.hero-container {
   padding: 188px 331px;
 }
 .hero-title-container{
@@ -264,9 +266,8 @@ padding-bottom: var(--basic-settings-padding-section);
 }
 
 /* ------------------------------ OUR TEAM SECTION ------------------- */
-.team-container{
-  background: var(--second-background-color);
-}
+.team-section {
+  background: var(--second-background-color);}
 .team-title {
   margin-bottom: 72px;
 }
@@ -357,11 +358,14 @@ padding-bottom: var(--basic-settings-padding-section);
   border-left: 1px solid var(--border-color-img-portfolio);
 }
 /* ----------------------------- FOOTER ------------------------------*/
+.footer-section{
+  background: var(--first-background-color);
+}
+
 .footer-container{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background: var(--first-background-color);
   padding-top: 100px;
   padding-bottom: 100px;
 }
