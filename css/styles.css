@@ -1,4 +1,4 @@
-/* --------------------------GENERAL SETTINGS------------------------- */
+/* ---------------GENERAL SETTINGS-------------------- */
 :root {
   /* -----text color---- */
   --first-text-color: #434455;
@@ -40,7 +40,7 @@ ul {
   padding: 0;
 }
 
-/* ---------------------------UNIVERSAL CLASSES----------------------- */
+/* ------------------UNIVERSAL CLASSES--------------------- */
 /* Centering and limiting content by width. Section padding */
 .container{
   width: 1158px;
@@ -125,9 +125,9 @@ ul {
   max-width: 100%;
   height: auto;
 }
-/******************************* MAIN PAGE ****************************/
+/********************** MAIN PAGE ************************/
 
-/* -------------------------------HEADER----------------------------- */
+/* ---------------------HEADER-------------------------- */
 .header-section {
   background: var(--fourth-background-color);
   border-bottom: 1px solid var(--sixth-text-color);
@@ -196,7 +196,7 @@ ul {
   padding: 24px 0px;
 }
 
-/* ----------------------------HERO SECTION------------------------- */
+/* -----------------------HERO SECTION--------------------- */
 .hero-section {
   background: var(--first-background-color);
 }
@@ -219,19 +219,19 @@ ul {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--second-text-color);
-  margin-bottom: 48px;
 }
 .hero-button {
   display: inline;
   width: 178px;
   padding: 16px 32px;
   text-align: center;
+  margin-top: 48px;
   background: var(--third-background-color);
   color: var(--second-text-color);
   border-radius: 4px; 
   border: 1px solid var(--third-background-color);
 }
-/* ----------------------BASIC PRINCIPLES SECTION ---------------------*/
+/* ---------------BASIC PRINCIPLES SECTION ------------------*/
 .principles-list {
   display: flex;
 }
@@ -246,18 +246,18 @@ ul {
   margin-bottom: 8px;
 }
 
-/* ----------------------- WHAT ARE WE DOING SECTION ------------------ */
+/* -------------- WHAT ARE WE DOING SECTION ---------------- */
 .work-section{
 padding-bottom: var(--basic-settings-padding-section);
 }
 
 .work-title {
-  margin-bottom: 72px;
+
 }
 .work-list {
   padding-left: 0;
   display: flex;
-  /* */
+  margin-top: 72px;
 }
 .work-item {
   display: flex;
@@ -267,16 +267,15 @@ padding-bottom: var(--basic-settings-padding-section);
   margin-left: 0;
 }
 
-/* ------------------------------ OUR TEAM SECTION ------------------- */
+/* -------------------- OUR TEAM SECTION ------------------- */
 .team-section {
   background: var(--second-background-color);}
 .team-title {
-  margin-bottom: 72px;
+
 }
 .team-list{
   display: flex;
-  /* margin-left: 0;
-  padding-left: 0; */
+  margin-top: 72px;
 }
 .team-item {
   background: var(--fourth-background-color);
@@ -287,11 +286,11 @@ padding-bottom: var(--basic-settings-padding-section);
 }
 .team-subtitle {
   text-align: center;
-  margin-bottom: 8px;
 }
 
 .team-description {
   text-align: center;
+  margin-top: 8px;
 }
 .team-border-img {
   padding: 32px 16px;
@@ -300,9 +299,9 @@ padding-bottom: var(--basic-settings-padding-section);
   border-radius: 0px 0px 4px 4px;
 }
 
-/* ***************************** PORTFOLIO PAGE ***************************/
+/* ***************** PORTFOLIO PAGE *************************/
 
-/* ------------------- PORTFOLIO FILTER BUTTONS ------------------------- */
+/* ------------ PORTFOLIO FILTER BUTTONS ------------------- */
 .portfolio-section{
   padding-bottom: var(--basic-settings-padding-section);
   padding-top: 96px;
@@ -328,7 +327,7 @@ padding-bottom: var(--basic-settings-padding-section);
   
 }
 
-/* ---------------------- ROW EXAMPLES OF PROJECTS ---------------------- */
+/* ------------- ROW EXAMPLES OF PROJECTS ---------------- */
 
 /* CONTAINER */
 /* .portfolio-card-container {
@@ -369,15 +368,13 @@ padding-bottom: var(--basic-settings-padding-section);
   border-bottom: 1px solid var(--border-color-img-portfolio);
   border-right: 1px solid var(--border-color-img-portfolio);
   border-left: 1px solid var(--border-color-img-portfolio);
+
 }
 
 .portfolio-card-description{
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
-.portfolio-container{
-
-}
 /* 
 .portfolio-card-list {
   display: flex;
@@ -410,7 +407,7 @@ padding-bottom: var(--basic-settings-padding-section);
   border-left: 1px solid var(--border-color-img-portfolio);
 } */
 
-/* ----------------------------- FOOTER ------------------------------*/
+/* ------------------ FOOTER --------------------------*/
 .footer-section{
   padding-top: 100px;
   padding-bottom: 100px;
@@ -421,9 +418,6 @@ padding-bottom: var(--basic-settings-padding-section);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-}
-.footer-logo{
-  margin-bottom: 16px;
 }
 .footer-logo,
 .footer-logo span {
@@ -442,7 +436,7 @@ padding-bottom: var(--basic-settings-padding-section);
 }
 .footer-description {
   width: 264px;
-  display: inline;
+  margin-top: 16px;
   flex-direction: column;
   flex-direction: row-reverse;
   color: var(--sixth-text-color);
