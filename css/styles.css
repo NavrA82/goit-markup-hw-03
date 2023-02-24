@@ -19,7 +19,7 @@
   /* --------- found -------------- */
   --secondary-found: 'Raleway', sans-serif;
   /* -----settings padding and margin*/
-  --basic-settings-padding-section: 120 px;
+  --basic-settings-padding-section: 120px;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -126,6 +126,7 @@ ul {
   height: auto;
 }
 /******************************* MAIN PAGE ****************************/
+
 /* -------------------------------HEADER----------------------------- */
 .header-section {
   background: var(--fourth-background-color);
