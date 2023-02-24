@@ -129,11 +129,12 @@ ul {
 
 /* -------------------------------HEADER----------------------------- */
 .header-section {
-  background: var(--fourth-background-color);
-  border-bottom: 1px solid var(--sixth-text-color);
+
 } 
 .header-all-nav{
   display: flex;
+  background: var(--fourth-background-color);
+  border-bottom: 1px solid var(--sixth-text-color);
 }
 /* ---logo------*/
 .header-logo {
@@ -196,11 +197,8 @@ ul {
 }
 
 /* ----------------------------HERO SECTION------------------------- */
-.hero-section {
-  background: var(--first-background-color);
-  line-height: 0;
-}
 .hero-container {
+  background: var(--first-background-color);
   padding: 188px 331px;
 }
 .hero-title-container{
@@ -229,7 +227,6 @@ ul {
   border-radius: 4px; 
   border: 1px solid var(--third-background-color);
 }
-
 /* ----------------------BASIC PRINCIPLES SECTION ---------------------*/
 .principles-list {
   display: flex;
@@ -246,9 +243,10 @@ ul {
 }
 
 /* ----------------------- WHAT ARE WE DOING SECTION ------------------ */
-.work-section {
+.work-container{
 padding-bottom: var(--basic-settings-padding-section);
 }
+
 .work-title {
   margin-bottom: 72px;
 }
@@ -266,7 +264,7 @@ padding-bottom: var(--basic-settings-padding-section);
 }
 
 /* ------------------------------ OUR TEAM SECTION ------------------- */
-.team-section {
+.team-container{
   background: var(--second-background-color);
 }
 .team-title {
@@ -324,7 +322,7 @@ padding-bottom: var(--basic-settings-padding-section);
 }
 
 /* ---------------------- ROW EXAMPLES OF PROJECTS ---------------------- */
-.portfolio-section{
+.portfolio-container{
   padding-bottom: var(--basic-settings-padding-section);
   padding-top: 96px;
 }
@@ -359,16 +357,13 @@ padding-bottom: var(--basic-settings-padding-section);
   border-left: 1px solid var(--border-color-img-portfolio);
 }
 /* ----------------------------- FOOTER ------------------------------*/
-.footer-section {
-  display: flex;
-  background: var(--first-background-color);
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
 .footer-container{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  background: var(--first-background-color);
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .footer-logo{
   margin-bottom: 16px;
