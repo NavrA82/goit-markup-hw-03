@@ -1,4 +1,4 @@
-/* --------------------------General settings------------------------- */
+/* --------------------------GENERAL SETTINGS------------------------- */
 :root {
   /* -----text color---- */
   --first-text-color: #434455;
@@ -12,28 +12,45 @@
   --second-background-color:#F4F4FD;
   --third-background-color: #4D5AE5;
   --fourth-background-color: #FFFFFF;
+  /* -------accent-color ----------*/
   --accent-color: #404BBF;
-  /* ---------Border color--------- */
+  /* ---------border color--------- */
   --border-color-img-portfolio: #E7E9FC;
   /* --------- found -------------- */
   --secondary-found: 'Raleway', sans-serif;
+  /* -----settings padding and margin*/
+  --basic-settings-padding-section: 120 px;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  color: #2E2F42;
+}
+/* margin and padding OFF */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
 }
 
-/* ---------------------------Universal classes----------------------- */
-body {
-  /* https://fonts.google.com font-family:'Roboto' */
-  font-family: "Roboto", sans-serif;
-  color:#2E2F42;
-}
-/* centering and limiting content by width */
+/* ---------------------------UNIVERSAL CLASSES----------------------- */
+/* Centering and limiting content by width. Section padding */
 .container{
   width: 1158px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0px 15px;
 }
-/* padding between content and border */
-.section {
-  padding: 0 15px 0 15px;
+.section{
+  padding-top: var(--basic-settings-padding-section);
+  padding-bottom: var(--basic-settings-padding-section);
 }
 /* delete marker */
 .list {
@@ -56,7 +73,7 @@ body {
   letter-spacing: 0.02em;
   text-transform: capitalize;
 }
-/* subtitle attributes */
+/* main subtitle attributes */
 .subtitle {
   font-weight: 500;
   font-size: 20px;
@@ -70,14 +87,6 @@ body {
   letter-spacing: 0.02em;
   color: var(--first-text-color);
 }
-/* margin OFF */
-.marginoff,
-h2,
-ul,
-p {
-  margin: 0;
-}
-
 /* fading title effect */
 .visually-hidden {
   position: absolute;
@@ -102,7 +111,6 @@ p {
   letter-spacing: 0.04em;
   border-radius: 4px;
 }
-
 /* hover and focus effect button*/
 .btn:hover,
 .btn:focus {
@@ -117,21 +125,20 @@ p {
   max-width: 100%;
   height: auto;
 }
-/******************************* Main Page ****************************/
-/* -------------------------------Header----------------------------- */
-.header {
-  background: #FFFFFF;
+/******************************* MAIN PAGE ****************************/
+/* -------------------------------HEADER----------------------------- */
+.header-section {
+  background: var(--fourth-background-color);
   border-bottom: 1px solid var(--sixth-text-color);
 } 
-.header-all{
+.header-all-nav{
   display: flex;
 }
-/* ----------logo--------- */
+/* ---logo------*/
 .header-logo {
   display: flex;
   margin-right: 76px;
-  width: 115px;
-
+  padding: 24px 0px;
 }
 .header-logo,
 .header-logo span {
@@ -150,24 +157,27 @@ p {
 /* Menu navigation*/
 .header-menu {
   display: flex;
-  padding-top: 24px;
+  margin-right: auto;
 }
 .header-list {
   display: flex;
-  width: 265px;
-  margin-right: 328px;
-  padding: 0;
+  gap: 40px;
 }
-.header-menu-item:not(:last-child){
-  margin-right: 40px;
+.header-menu-item {
+
 }
 .header-menu-link {
+  display: flex;
   font-weight: 500;
   font-style: normal;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--third-text-color);
+  padding: 24px 0px;
+}
+.header-menu-item:not(:last-child) {
+  margin-left: 40;
 }
 /* Contacts */
 .header-address {
@@ -175,14 +185,8 @@ p {
 }
 .header-address-list {
   display: flex;
-  padding: 24px 0px;
-}
-.header-address-item{
-  display: flex;
+  align-items: center;
   gap: 40px;
-}
-.header-address-item:not(:last-child){
-  margin-right: 40px;
 }
 .header-address-link {
   font-style: normal;
@@ -190,34 +194,46 @@ p {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--third-text-color);
+  padding: 24px 0px;
 }
 
-/* ----------------------------Hero section------------------------- */
-.hero {
-  display: flex;
+/* ----------------------------HERO SECTION------------------------- */
+.hero-section {
   background: var(--first-background-color);
+  line-height: 0;
+  padding-top: 188px;
+  padding-bottom: 188px;
+}
+.hero-title-container{
+  display: flex;
+  max-width: 496px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  align-items: center;
 }
 .hero-title {
-  padding: 188px 316px 0 316px;
+  font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--second-text-color);
+  margin-bottom: 48px;
 }
 .hero-button {
+  display: inline;
+  width: 178px;
   padding: 16px 32px;
-  margin: 48px auto 188px auto;
+  text-align: center;
   background: var(--third-background-color);
   color: var(--second-text-color);
   border-radius: 4px; 
   border: 1px solid var(--third-background-color);
 }
-/* ----------------------Basic principles section ---------------------*/
+/* ----------------------BASIC PRINCIPLES SECTION ---------------------*/
 .principles-list {
   display: flex;
-  padding-left: 0;
-  padding: 120px 0;
 }
 .principles-item {
   margin-left: 24px;
@@ -229,14 +245,17 @@ p {
 .principles-title {
   margin-bottom: 8px;
 }
-/* ----------------------- What are we doing section ------------------ */
+/* ----------------------- WHAT ARE WE DOING SECTION ------------------ */
+.work-section {
+padding-bottom: var(--basic-settings-padding-section);
+}
 .work-title {
   margin-bottom: 72px;
 }
 .work-list {
   padding-left: 0;
   display: flex;
-  padding-bottom: 120px;
+  /* */
 }
 .work-item {
   display: flex;
@@ -245,20 +264,17 @@ p {
 .work-item:first-child {
   margin-left: 0;
 }
-
-/* ------------------------------ Our Team section ------------------- */
-.team {
+/* ------------------------------ OUR TEAM SECTION ------------------- */
+.team-section {
   background: var(--second-background-color);
 }
 .team-title {
-  padding-top: 120px;
   margin-bottom: 72px;
 }
 .team-list{
   display: flex;
   margin-left: 0;
   padding-left: 0;
-  padding-bottom: 120px;
 }
 .team-item {
   background: var(--fourth-background-color);
@@ -282,9 +298,9 @@ p {
   border-radius: 0px 0px 4px 4px;
 }
 
-/* *****************************Portfolio Page ***************************/
+/* ***************************** PORTFOLIO PAGE ***************************/
 
-/* ------------------- Portfolio filter buttons------------------------- */
+/* ------------------- PORTFOLIO FILTER BUTTONS ------------------------- */
 .portfolio-button {
   display: flex;
   background: var(--second-background-color);
@@ -295,25 +311,26 @@ p {
   padding: 12px  24px;
 }
 .portfolio-button-list {
-  padding-top: 96px;
-  margin-bottom: 72px;
   display: flex;
   justify-content: center;
   padding-left: 0;
+  gap: 24px;
+  margin-bottom: 72px;
 }
 .portfolio-button-item{
-  margin-left: 24px;
+  display: flex;
+  
 }
-.portfolio-button-item:first-child{
-  margin-left: 0;
+/* ---------------------- ROW EXAMPLES OF PROJECTS ---------------------- */
+.portfolio-section{
+  padding-bottom: var(--basic-settings-padding-section);
+  padding-top: 96px;
 }
-/* ---------------------- Row examples of projects ---------------------- */
 .portfolio-img-list {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
   padding-left: 0;
-  padding-bottom: 120px;
 }
 .portfolio-img-item {
   margin-left: 24px;
@@ -330,27 +347,33 @@ p {
   margin-bottom: 0;
 }
 .portfolio-subtitle {
-  padding-top: 32px;
-  margin-left: 16px;
+  margin-bottom: 8px;
 }
 .portfolio-description {
-  margin-top: 8px;
-  margin-bottom: 32px;
-  margin-left: 16px;
+
 }
 .portfolio-border-img{
+  padding: 32px 16px;
   background: var(--second-text-color);
   border-bottom: 1px solid var(--border-color-img-portfolio);
   border-right: 1px solid var(--border-color-img-portfolio);
   border-left: 1px solid var(--border-color-img-portfolio);
 }
-/* ----------------------------- footer ------------------------------*/
-.footer {
+/* ----------------------------- FOOTER ------------------------------*/
+.footer-section {
+  display: flex;
   background: var(--first-background-color);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.footer-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 .footer-logo{
-  padding-top: 100px;
   margin-bottom: 16px;
+  padding: 0;
 }
 .footer-logo,
 .footer-logo span {
@@ -358,19 +381,19 @@ p {
   font-family: var(--secondary-found);
   font-size: 18px;
   line-height: 1.67;
-  display: flex;
   align-items: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--fifth-text-color);
-  margin: 0;
+  padding: 0;
 }
 .footer-logo span {
   color: var(--fourth-text-color);
 }
 .footer-description {
-  padding-top: 16px;
-  padding-bottom: 100px;
-  padding-right: 864px;
+  width: 264px;
+  display: inline;
+  flex-direction: column;
+  flex-direction: row-reverse;
   color: var(--sixth-text-color);
 }

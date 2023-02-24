@@ -17,14 +17,14 @@
   </head>
   <body>
     <!-- Portfolio Page -->
-    <header class="header">
-      <div class="container section header-all">
+    <header class="header-section">
+      <div class="container header-all-nav">
         <nav class="header-menu">
           <!-- Logo Site -->
           <a class="header-logo list" href="./index.html"><span>Web</span>Studio</a>
           <!-- /Logo Site -->
           <!-- Menu Nav -->
-          <ul class="header-list marginoff">
+          <ul class="header-list">
             <li class="header-menu-item list"><a class="header-menu-link link" href="./index.html">Studio</a></li>
             <li class="header-menu-item list"><a class="header-menu-link link" href="./portfolio.html">Portfolio</a></li>
             <li class="header-menu-item list"><a class="header-menu-link link" href="">Contacts</a></li>
@@ -33,7 +33,7 @@
         </nav>
         <!-- Contacts -->
         <address class="header-address">
-          <ul class="header-address-list marginoff">
+          <ul class="header-address-list">
             <li class="header-address-item list"><a class="header-address-link link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
             <li class="header-address-item list"><a class="header-address-link link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
           </ul>
@@ -44,13 +44,12 @@
     <main>
       
       <!-- Examples of projects section-->
-      <section class="portfolio">
-        <div class="container section">
+      <section class="portfolio-section">
+        <div class="container">
           <!-- DELETE IN CSS -->
           <h1 class="visually-hidden">Portfolio (Examples of projects)</h1>
-          <!-- /DELETE IN CSS -->
           <!-- Portfolio filter buttons-->
-          <ul class="portfolio-button-list list marginoff">
+          <ul class="portfolio-button-list list">
             <li class="portfolio-button-item"><button type="button" class="portfolio-button btn">All</button></li>
             <li class="portfolio-button-item"><button type="button" class="portfolio-button btn">Web Site</button></li>
             <li class="portfolio-button-item"><button type="button" class="portfolio-button btn">App</button></li>
@@ -83,6 +82,30 @@
               </div>
             </li>
             <li class="portfolio-img-item">
+              <img class="portfolio-img" src="./images/row-two-foto-one-min.jpg" alt="marketing-taxi-service-foto" width="360"
+                height="300">
+              <div class="portfolio-border-img">
+                <h2 class="portfolio-subtitle subtitle">Taxi Service</h2>
+                <p class="portfolio-description text">Marketing</p>
+              </div>
+            </li>
+            <li class="portfolio-img-item">
+              <img class="portfolio-img" src="./images/row-two-foto-two-min.jpg" alt="design-screen-illustrations-foto" width="360"
+                height="300">
+              <div class="portfolio-border-img">
+                <h2 class="portfolio-subtitle subtitle">Screen Illustrations</h2>
+                <p class="portfolio-description text">Design</p>
+              </div>
+            </li>
+            <li class="portfolio-img-item">
+              <img class="portfolio-img" src="./images/row-two-foto-three-min.jpg" alt="marketing-online-courses-foto" width="360"
+                height="300">
+              <div class="portfolio-border-img">
+                <h2 class="portfolio-subtitle subtitle">Online Courses</h2>
+                <p class="portfolio-description text">Marketing</p>
+              </div>
+            </li>
+            <li class="portfolio-img-item">
               <img class="portfolio-img" src="./images/row-three-foto-one-min.jpg" alt="design-instagram-stories-concept-design-foto" width="360" height="300">
               <div class="portfolio-border-img">
                 <h2 class="portfolio-subtitle subtitle">Instagram Stories Concept</h2>
@@ -103,27 +126,7 @@
                 <p class="portfolio-description text">Web Site</p>
               </div>
             </li>              
-            <li class="portfolio-img-item">
-              <img class="portfolio-img" src="./images/row-two-foto-one-min.jpg" alt="marketing-taxi-service-foto" width="360" height="300">
-              <div class="portfolio-border-img">
-                <h2 class="portfolio-subtitle subtitle">Taxi Service</h2>
-                <p class="portfolio-description text">Marketing</p>
-              </div>
-            </li>
-            <li class="portfolio-img-item">
-              <img class="portfolio-img" src="./images/row-two-foto-two-min.jpg" alt="design-screen-illustrations-foto" width="360" height="300">
-              <div class="portfolio-border-img">
-                <h2 class="portfolio-subtitle subtitle">Screen Illustrations</h2>
-                <p class="portfolio-description text">Design</p>
-              </div>
-            </li>
-            <li class="portfolio-img-item">
-              <img class="portfolio-img" src="./images/row-two-foto-three-min.jpg" alt="marketing-online-courses-foto" width="360" height="300">
-              <div class="portfolio-border-img">
-                <h2 class="portfolio-subtitle subtitle">Online Courses</h2>
-                <p class="portfolio-description text">Marketing</p>
-              </div>
-            </li>
+
           </ul>
         </div>
         </section>
@@ -131,10 +134,11 @@
       <!-- /Examples of projects section-->
     </main>
 
-    <footer class="footer">
-      <div class="container section">
+    <footer class="footer-section">
+      <div class="container footer-container">
         <a class="footer-logo list" href="./index.html"><span>Web</span>Studio</a>
-        <p class="footer-description text"> Increase the flow of customers and sales for your business with digital marketing & growth solutions.</p>
+        <p class="footer-description text"> Increase the flow of customers and sales for your business with digital
+          marketing & growth solutions.</p>
       </div>
     </footer>
     <!-- Portfolio Page -->
