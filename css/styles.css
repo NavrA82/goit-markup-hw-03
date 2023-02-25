@@ -18,8 +18,9 @@
   --border-color-img-portfolio: #E7E9FC;
   /* --------- found -------------- */
   --secondary-found: 'Raleway', sans-serif;
-  /* -----settings padding and margin*/
+  /* -----settings padding, margin and gap*/
   --basic-settings-padding-section: 120px;
+  --basic-settings-gap: 24px;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -43,9 +44,8 @@ ul {
 /* ------------------UNIVERSAL CLASSES--------------------- */
 /* Centering and limiting content by width. Section padding */
 .container{
-  width: 1158px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 1158px;
+  margin: auto;
   padding: 0px 15px;
 }
 .section{
@@ -119,8 +119,8 @@ ul {
   border-radius: 4px;
 }
 /* foto full */
-.portfolio-img,
-.team-img {
+.portfolio-card-img,
+.team-card-img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -134,7 +134,6 @@ ul {
 } 
 .header-all-nav{
   display: flex;
-
 }
 /* ---logo------*/
 .header-logo {
@@ -168,7 +167,6 @@ ul {
 .header-menu-link {
   display: flex;
   font-weight: 500;
-  font-style: normal;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -202,14 +200,10 @@ ul {
 }
 .hero-container {
   padding: 188px 0;
-
 }
 .hero-title-container{
   max-width: 496px;
-  flex-direction: column;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 .hero-title {
   max-width: 496px;
@@ -221,10 +215,10 @@ ul {
   color: var(--second-text-color);
 }
 .hero-button {
-  display: inline;
+  display: block;
   width: 178px;
   padding: 16px 32px;
-  text-align: center;
+  margin: auto;
   margin-top: 48px;
   background: var(--third-background-color);
   color: var(--second-text-color);
@@ -234,74 +228,54 @@ ul {
 /* ---------------BASIC PRINCIPLES SECTION ------------------*/
 .principles-list {
   display: flex;
+  gap: var(--basic-settings-gap);
 }
 .principles-item {
-  margin-left: 24px;
   width: 264px;
+  width: calc((100 - 72px)) / 4;
 }
-.principles-item:first-child {
-  margin-left: 0px;
+.principles-description {
+  margin-top: 8px;
 }
-.principles-title {
-  margin-bottom: 8px;
-}
-
 /* -------------- WHAT ARE WE DOING SECTION ---------------- */
 .work-section{
 padding-bottom: var(--basic-settings-padding-section);
 }
-
-.work-title {
-
-}
 .work-list {
-  padding-left: 0;
   display: flex;
+  gap: var(--basic-settings-gap);
   margin-top: 72px;
 }
 .work-item {
-  display: flex;
-  margin-left: 24px;
+  width: calc((100 - 48px)) / 3;
 }
-.work-item:first-child {
-  margin-left: 0;
-}
-
 /* -------------------- OUR TEAM SECTION ------------------- */
 .team-section {
-  background: var(--second-background-color);}
-.team-title {
-
+  background: var(--second-background-color);
 }
-.team-list{
+  .team-card-list{
   display: flex;
+  gap: var(--basic-settings-gap);
   margin-top: 72px;
 }
-.team-item {
+.team-card-item {
   background: var(--fourth-background-color);
-  margin-left: 24px;
+  width: calc((100 - 72px)) / 4;
 }
-.team-item:first-child {
-  margin-left: 0;
-}
-.team-subtitle {
-  text-align: center;
-}
-
-.team-description {
-  text-align: center;
+.team-card-description {
   margin-top: 8px;
 }
-.team-border-img {
+.team-card-content {
   padding: 32px 16px;
+  text-align: center;
   background: var(--second-text-color);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 }
 
-/* ***************** PORTFOLIO PAGE *************************/
-
-/* ------------ PORTFOLIO FILTER BUTTONS ------------------- */
+/* ***************** PORTFOLIO PAGE ************************ */
+/* -------- EXAMPLES OF PROJECTS SECTION ------------------- */
+/* Portfolio filter buttons */
 .portfolio-section{
   padding-bottom: var(--basic-settings-padding-section);
   padding-top: 96px;
@@ -318,95 +292,29 @@ padding-bottom: var(--basic-settings-padding-section);
 .portfolio-button-list {
   display: flex;
   justify-content: center;
-  padding-left: 0;
-  gap: 24px;
-  margin-bottom: 72px;
+  gap: var(--basic-settings-gap);
 }
-.portfolio-button-item{
-  display: flex;
-  
-}
-
-/* ------------- ROW EXAMPLES OF PROJECTS ---------------- */
-
-/* CONTAINER */
-/* .portfolio-card-container {
-  width: 1170px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-} */
-
-/* CARD SET */
+/*Row examples of projects */
 .portfolio-card-list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc(-1 * 24px);
-  margin-top: calc(-1 * 48px);
+  row-gap: 48px;
+  column-gap: var(--basic-settings-gap);
+  margin-top: 72px;
 }
-
-.portfolio-card-list>.portfolio-card-item {
-  flex-basis: calc(100% / 3 - 24px);
-  margin-left: 24px;
-  margin-top: 48px;
+.portfolio-card-item {
+  width: calc((100 - 48px)) / 3;
 }
-
-/* CARD */
-/* .portfolio-card {
-  box-shadow: 20px;
-  border-radius: 4px;
-  overflow: hidden;
-} */
-
 .portfolio-card-content {
   padding: 32px 16px;
   background: var(--second-text-color);
   border-bottom: 1px solid var(--border-color-img-portfolio);
   border-right: 1px solid var(--border-color-img-portfolio);
   border-left: 1px solid var(--border-color-img-portfolio);
-
 }
-
-.portfolio-card-description{
+.portfolio-card-description {
   margin-top: 8px;
 }
-
-/* 
-.portfolio-card-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding-left: 0;
-}
-.portfolio-card-item {
-  margin-left: 24px;
-  margin-top: 24px;
-  margin-bottom: 24px;
-}
-.portfolio-card-item:nth-child(3n + 1) {
-  margin-left: 0;
-}
-.portfolio-card-item:nth-child(-n+3) {
-  margin-top: 0;
-}
-.portfolio-icard-item:nth-last-child(-n+3) {
-  margin-bottom: 0;
-}
-.portfolio-card-subtitle {
-  margin-bottom: 8px;
-}
-.portfolio-card-content{
-  padding: 32px 16px;
-  background: var(--second-text-color);
-  border-bottom: 1px solid var(--border-color-img-portfolio);
-  border-right: 1px solid var(--border-color-img-portfolio);
-  border-left: 1px solid var(--border-color-img-portfolio);
-} */
-
 /* ------------------ FOOTER --------------------------*/
 .footer-section{
   padding-top: 100px;
